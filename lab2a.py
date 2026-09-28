@@ -24,4 +24,4 @@ if x >= 6:
 
 if x >= 4 and x < 12:
     print(f'{x} is equal to 4 or greater than 4 and less than 12 ')
-# - Print the appropriate message to user if the expression evaluates to TRUE.
+# - Print the appropriate message to user if the expression evaluates to TRUE
