@@ -1,15 +1,17 @@
 # Add comments before you do anything else.
 
 #!/usr/bin/env python3
-# Author:
-# Date:
+# Author: Rey Abbas
+# Date: 2026/09/27
 # Purpose: Learn how and practice using nested if, elif, and else statments..
 # Usage: ./lab2g.py
 
 # TO DO 1: Follow the instructions given in README.md file
 # Initialize constant variables for the tax rates and rate limits.
-
-
+LOW_TAX = 0.10
+HIGH_TAX = 0.25
+SINGLE_LIMIT = 32000
+MARRIED_LIMIT = 64000
 # Create a program calculating tax with the image above
 # The script should include a variable income.
 # The value of income should be a number (preferably in the thousands) inputted by the user.
@@ -54,21 +56,21 @@ print(f"\nYour income is: {income}")
 print(f"Your status is: {status}")
 
 if status == "single":
-    if income <= 32000:
+    if income <= SINGLE_LIMIT:
         print("less or is 32000")
-        tax = income * 0.10
+        tax = income * LOW_TAX
         print(f"Your tax is: {tax}")
 
-    elif income > 32000:
+    elif income > SINGLE_LIMIT:
         print("more than 32000")
-        tax = 3200 + ((income - 32000) * 0.25)
+        tax = 3200 + ((income - SINGLE_LIMIT) * HIGH_TAX)
         print(f"Your tax is: {tax}")
 
 elif status == "married":
-    if income <= 64000:
-        tax = income * 0.10
+    if income <= MARRIED_LIMIT:
+        tax = income * LOW_TAX
         print(f"Your tax is: {tax}")
         
-    elif income > 64000:
-        tax = 6400 + ((income - 64000) * 0.25)
+    elif income > MARRIED_LIMIT:
+        tax = 6400 + ((income - MARRIED_LIMIT) * HIGH_TAX)
         print(f"Your tax is: {tax}")
